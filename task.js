@@ -62,8 +62,6 @@ function onDelete(td) {
         resetForm();
     }
 }
-
-
 function resetForm() {
     document.getElementById("productCode").value = '';
     document.getElementById("product").value = '';
