@@ -7,21 +7,55 @@
     <link rel="stylesheet" href="task.css" />
   </head>
   <body>
-    <div class="label">
-      <div id="lbldiv">
-        <label for="AD">AD:</label> <input type="text" id="AD" />
-        <label for="SOYAD">SOYAD:</label> <input type="text" id="SOYAD" />
-        <label for="YAS">YAS:</label> <input type="text" id="YAS" />
-        <button id="elaveet">Elave Et</button>
-      </div>
-      <table class="table" id="liste">
-        <tr>
-          <th class="th">AD</th>
-          <th class="th">SOYAD</th>
-          <th class="th">YAS</th>
-        </tr>
-      </table>
-    </div>
+   <form id="form">
+    <input type="number" id="input" placeholder="axtar..">
+    <button>Axtar</button>
+    <table>
+      <tr>
+          <td>
+              <form autocomplete="off" onsubmit="onFormSubmit()">
+                  <div>
+                      <label for="productCode">Product Code</label>
+                      <input type="text" name="productCode" id="productCode">
+                  </div>
+                  <div>
+                      <label for="product">Product Name</label>
+                      <input type="text" name="product" id="product">
+                  </div>
+                  <div>
+                      <label for="qty">Qty</label>
+                      <input type="number" name="qty" id="qty">
+                  </div>
+                  <div>
+                      <label for="perPrice">Price</label>
+                      <input type="number" name="perPrice" id="perPrice">
+                  </div>
+
+                  <div class="form_action--button">
+                      <input type="submit" value="Submit">
+                      <input type="reset" value="Reset">
+                  </div>
+              </form>
+
+              <td>
+                  <table class="list" id="storeList">
+                      <thead>
+                          <tr>
+                              <th>Product Code</th>
+                              <th>Product Name</th>
+                              <th>Qty</th>
+                              <th>Price</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+
+                      </tbody>
+                  </table>
+              </td>
+          </td>
+      </tr>
+  </table>
+    
 
     <script src="task.js"></script>
   </body>
